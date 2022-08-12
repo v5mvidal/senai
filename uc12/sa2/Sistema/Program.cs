@@ -38,9 +38,12 @@ namespace Sistema
 
             Console.WriteLine(idadeValida);
 
-            if (idadeValida == true) {
+            if (idadeValida == true)
+            {
                 System.Console.WriteLine("Cadastro Aprovado");
-            } else {
+            }
+            else
+            {
                 Console.WriteLine("Cadastro Reprovado");
             }
         }
@@ -51,14 +54,22 @@ namespace Sistema
          * conforme solicitado na UC12
          * SA2 - Atividade Online 2
          */
-        static void SaveFile(string fileName) {
+        static void SaveFile(string fileName)
+        {
             string directoryName = Directory.GetCurrentDirectory();
             string fileNameWithExtension = fileName + ".txt";
             string destinationFile = directoryName + Path.DirectorySeparatorChar + fileNameWithExtension;
 
-            var stream = new StreamWriter(destinationFile);
-            stream.Write("Arquivo criado!");
-            stream.Close();
+            try
+            {
+                var stream = new StreamWriter(destinationFile);
+                stream.Write("Arquivo criado!");
+                stream.Close();
+            }
+            catch (System.Exception e)
+            {
+                Console.WriteLine($"Houve erro ao salvar o arquivo: {fileNameWithExtension}", e.Message);
+            }
         }
     }
 }
