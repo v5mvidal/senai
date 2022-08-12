@@ -11,7 +11,7 @@ namespace Sistema
         public string? nome { get; set; }
         public Endereco? endereco { get; set; }
 
-        /* Método */
-        public abstract void PagarImposto(float rendimento);
+        /* Métodos */
+        public virtual void PagarImposto(float rendimento) {}
     }
 }

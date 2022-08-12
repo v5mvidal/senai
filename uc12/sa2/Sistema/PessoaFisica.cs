@@ -10,6 +10,7 @@ namespace Sistema
         /* Atributos */
         public string? cpf { get; set; }
         public DateTime dataNascimento { get; set; }
+
         /* Métodos */
         public override void PagarImposto(float rendimento) { }
         public bool ValidarDataNascimento(DateTime dataNascimento)
