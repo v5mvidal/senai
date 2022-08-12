@@ -10,5 +10,8 @@ namespace Sistema
         /* Atributos */
         public string? cnpj { get; set; }
         public string? razaoSocial { get; set; }
+
+        /* Método */
+        public override void PagarImposto(float rendimento){}
     }
 }
