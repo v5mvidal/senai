@@ -1,9 +1,13 @@
-﻿namespace Sistema
+﻿using System.IO;
+
+namespace Sistema
 {
     public class Program
     {
         static void Main(string[] args)
         {
+            Console.ForegroundColor = ConsoleColor.White;
+
             Endereco and = new Endereco();
             and.logradouro = "Rua X";
             and.numero = 100;
@@ -13,8 +17,17 @@
             PessoaFisica pf = new PessoaFisica();
             pf.endereco = and;
             pf.nome = "Fulano de Tal";
-            pf.cpf = "12345678999";
+            pf.cpf = "123.456.789-99";
             pf.dataNascimento = new DateTime(1994, 05, 19);
+
+            SaveFile(pf.nome);
+
+            PessoaJuridica pj = new PessoaJuridica();
+            pj.endereco = and;
+            pj.razaoSocial = "Fulano Ltda";
+            pj.cnpj = "12.345.678/0001-99";
+
+            SaveFile(pj.razaoSocial);
 
             // Interpolação
             Console.WriteLine($"O {pf.nome} mora na Rua: {pf.endereco.logradouro} número {pf.endereco.numero}");
@@ -30,6 +43,16 @@
             } else {
                 Console.WriteLine("Cadastro Reprovado");
             }
+        }
+
+        static void SaveFile(string fileName) {
+            string directoryName = Directory.GetCurrentDirectory();
+            string fileNameWithExtension = fileName + ".txt";
+            string destinationFile = directoryName + Path.DirectorySeparatorChar + fileNameWithExtension;
+
+            var stream = new StreamWriter(destinationFile);
+            stream.Write("Arquivo criado!");
+            stream.Close();
         }
     }
 }
