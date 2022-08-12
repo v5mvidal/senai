@@ -45,6 +45,12 @@ namespace Sistema
             }
         }
 
+        /*
+         * Função para salvar o arquivo com os
+         * nomes das pessoas física e jurídica
+         * conforme solicitado na UC12
+         * SA2 - Atividade Online 2
+         */
         static void SaveFile(string fileName) {
             string directoryName = Directory.GetCurrentDirectory();
             string fileNameWithExtension = fileName + ".txt";
