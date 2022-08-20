@@ -6,46 +6,63 @@ namespace Sistema
     {
         static void Main(string[] args)
         {
-            Console.ForegroundColor = ConsoleColor.White;
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine(@$"
+===================================================
+!                                                 !
+!                                                 !
+!         Seja Bem Vindo ao nosso Sistema         !
+!              de Cadastro de Pessoa              !
+!                Física e Jurídica                !
+!                                                 !
+!                                                 !
+===================================================
+");
 
-            Endereco and = new Endereco();
-            and.logradouro = "Rua X";
-            and.numero = 100;
-            and.complemento = "Qualquer coisa";
-            and.enderecoComercial = false;
+            Console.Write("iniciando ");
+            Thread.Sleep(500);
 
-            PessoaFisica pf = new PessoaFisica();
-            pf.endereco = and;
-            pf.nome = "Fulano de Tal";
-            pf.cpf = "123.456.789-99";
-            pf.dataNascimento = new DateTime(1994, 05, 19);
-
-            SaveFile(pf.nome);
-
-            PessoaJuridica pj = new PessoaJuridica();
-            pj.endereco = and;
-            pj.razaoSocial = "Fulano Ltda";
-            pj.cnpj = "12.345.678/0001-99";
-
-            SaveFile(pj.razaoSocial);
-
-            // Interpolação
-            Console.WriteLine($"O {pf.nome} mora na Rua: {pf.endereco.logradouro} número {pf.endereco.numero}");
-            // Concatenação
-            Console.WriteLine("O " + pf.nome + " mora na Rua: " + pf.endereco.logradouro + " número " + pf.endereco.numero);
-
-            bool idadeValida = pf.ValidarDataNascimento(pf.dataNascimento);
-
-            Console.WriteLine(idadeValida);
-
-            if (idadeValida == true)
+            for (var contador = 0; contador < 10; contador++)
             {
-                System.Console.WriteLine("Cadastro Aprovado");
+                Console.Write("#");
+                Thread.Sleep(500);
             }
-            else
+
+            Console.Clear();
+
+            string? opcao;
+
+            do
             {
-                Console.WriteLine("Cadastro Reprovado");
-            }
+                Console.WriteLine(@$"
+===================================================
+!          Escolha uma das opcões abaixo          !
+===================================================
+!              1 - Pessoa Física                  !
+!              2 - Pessoa Jurídica                !
+!                                                 !
+!              0 - Sair                           !
+!                                                 !
+===================================================
+");
+
+                opcao = Console.ReadLine();
+
+                switch (opcao)
+                {
+                    case "1":
+                        break;
+                    case "2":
+                        break;
+                    case "0":
+                        break;
+                    default:
+                        Console.WriteLine("Opcão inválida, por favor digite uma das opções apresentadas.");
+                        break;
+                }
+            } while (opcao != "0");
+
+            Console.ResetColor();
         }
 
         /*
