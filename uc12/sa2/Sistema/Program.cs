@@ -6,7 +6,21 @@ namespace Sistema
     {
         static void Main(string[] args)
         {
-            Console.ForegroundColor = ConsoleColor.Green;
+            static void BarraCarregamento(string texto)
+            {
+                Console.ResetColor();
+                Console.ForegroundColor = ConsoleColor.Green;
+
+                Console.Write(texto);
+                Thread.Sleep(500);
+
+                for (var contador = 0; contador < 10; contador++)
+                {
+                    Console.Write("$");
+                    Thread.Sleep(500);
+                }
+            }
+
             Console.WriteLine(@$"
 ===================================================
 !                                                 !
@@ -19,16 +33,7 @@ namespace Sistema
 ===================================================
 ");
 
-            Console.Write("iniciando ");
-            Thread.Sleep(500);
-
-            for (var contador = 0; contador < 10; contador++)
-            {
-                Console.Write("#");
-                Thread.Sleep(500);
-            }
-
-            Console.Clear();
+            BarraCarregamento("Iniciando ");
 
             string? opcao;
 
@@ -51,10 +56,44 @@ namespace Sistema
                 switch (opcao)
                 {
                     case "1":
+                        Endereco endPf = new Endereco();
+
+                        endPf.logradouro = "Rua Niteroi";
+                        endPf.numero = 180;
+                        endPf.complemento = "Escola SENAI Paulo Skaf";
+                        endPf.enderecoComercial = false;
+
+                        PessoaFisica Lucas = new PessoaFisica();
+                        Lucas.cpf = "238.444.420-49";
+                        Lucas.dataNascimento = new DateTime(2004, 08, 21);
+                        Lucas.endereco = endPf;
+                        Lucas.nome = "Lucas Rodriguez Sinni";
+
+                        Console.WriteLine(@$"Nome: {Lucas.nome}
+CPF: {Lucas.cpf}
+Nascido em {Lucas.dataNascimento.ToString("dd/MM/yyyy")}
+Endereço: {endPf.logradouro}, {endPf.numero}");
+
+                        Console.WriteLine();
                         break;
                     case "2":
+                        Endereco endPj = new Endereco();
+
+                        endPj.logradouro = "Rua Niteroi";
+                        endPj.numero = 180;
+                        endPj.complemento = "Escola SENAI Paulo Skaf";
+                        endPj.enderecoComercial = true;
+
+                        PessoaJuridica pj = new PessoaJuridica();
+                        pj.cnpj = "48.729.118/0001-81";
+                        pj.endereco = endPj;
+                        pj.razaoSocial = "Pessoa Jurídica";
+                        pj.nome = "Jequiti";
+
+                        Console.WriteLine(pj.cnpj);
                         break;
                     case "0":
+                        Console.WriteLine("Obrigado por utilizar o nosso sistema");
                         break;
                     default:
                         Console.WriteLine("Opcão inválida, por favor digite uma das opções apresentadas.");
