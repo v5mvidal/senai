@@ -6,11 +6,10 @@ namespace Sistema
     {
         static void Main(string[] args)
         {
+            List<PessoaFisica> listaPf = new List<PessoaFisica>();
+
             static void BarraCarregamento(string texto)
             {
-                Console.ResetColor();
-                Console.ForegroundColor = ConsoleColor.Green;
-
                 Console.Write(texto);
                 Thread.Sleep(500);
 
@@ -33,7 +32,10 @@ namespace Sistema
 ===================================================
 ");
 
-            BarraCarregamento("Iniciando ");
+            Console.ResetColor();
+            Console.ForegroundColor = ConsoleColor.Green;
+
+            // BarraCarregamento("Iniciando ");
 
             string? opcao;
 
@@ -43,11 +45,18 @@ namespace Sistema
 ===================================================
 !          Escolha uma das opcões abaixo          !
 ===================================================
-!              1 - Pessoa Física                  !
-!              2 - Pessoa Jurídica                !
 !                                                 !
-!              0 - Sair                           !
+!                  PESSOA FÍSICA                  !
+!           1 - Cadastrar Pessoa Física           !
+!           2 - Listar Pessoa Física              !
+!           3 - Remover Pessoa Física             !
 !                                                 !
+!                 PESSOA JURÍDICA                 !
+!           4 - Cadastrar Pessoa Jurídica         !
+!           5 - Listar Pessoa Jurídica            !
+!           6 - Remover Pessoa Jurídica           !
+===================================================
+!           0 - Sair                              !
 ===================================================
 ");
 
@@ -58,45 +67,114 @@ namespace Sistema
                     case "1":
                         Endereco endPf = new Endereco();
 
-                        endPf.logradouro = "Rua Niteroi";
-                        endPf.numero = 180;
-                        endPf.complemento = "Escola SENAI Paulo Skaf";
-                        endPf.enderecoComercial = false;
+                        Console.WriteLine("Digite seu Logradouro");
+                        endPf.logradouro = Console.ReadLine();
 
-                        PessoaFisica Lucas = new PessoaFisica();
-                        Lucas.cpf = "238.444.420-49";
-                        Lucas.dataNascimento = new DateTime(2004, 08, 21);
-                        Lucas.endereco = endPf;
-                        Lucas.nome = "Lucas Rodriguez Sinni";
+                        Console.WriteLine("Digite o Número da sua residência caso exista, senão, pressione ENTER para pular");
+                        endPf.numero = int.Parse(Console.ReadLine());
 
-                        Console.WriteLine(@$"Nome: {Lucas.nome}
-CPF: {Lucas.cpf}
-Nascido em {Lucas.dataNascimento.ToString("dd/MM/yyyy")}
-Endereço: {endPf.logradouro}, {endPf.numero}");
+                        Console.WriteLine("Digite o Complemento da sua residência caso exista, senão, pressione ENTER para pular");
+                        endPf.complemento = Console.ReadLine();
 
-                        Console.WriteLine();
+                        Console.WriteLine("Este endereço é comercial? (Sim = S ou Não = N)");
+                        string endComercial = Console.ReadLine().ToUpper();
+
+                        do
+                        {
+                            if (endComercial == "S")
+                            {
+                                endPf.enderecoComercial = true;
+                                break;
+                            }
+                            else if (endComercial == "N")
+                            {
+                                endPf.enderecoComercial = false;
+                                break;
+                            }
+                            else
+                            {
+                                Console.WriteLine("Informe se o seu endereço é comercial com Sim = S ou Não = N");
+                                endComercial = Console.ReadLine().ToUpper();
+
+                                if (endComercial == "S")
+                                {
+                                    endPf.enderecoComercial = true;
+                                    break;
+                                }
+                                else if (endComercial == "N")
+                                {
+                                    endPf.enderecoComercial = false;
+                                    break;
+                                }
+                            }
+                        } while (endComercial != "S" || endComercial != "N");
+
+                        PessoaFisica pf = new PessoaFisica();
+
+                        pf.endereco = endPf;
+
+                        Console.WriteLine("Digite seu CPF (somente números)");
+                        pf.cpf = Console.ReadLine();
+
+                        Console.WriteLine("Digite seu nome");
+                        pf.nome = Console.ReadLine();
+
+                        Console.WriteLine("Digite seu salário");
+                        pf.salario = float.Parse(Console.ReadLine());
+
+                        Console.WriteLine("Informe sua data de nascimento no formato [AAAA, MM, DD]");
+                        pf.dataNascimento = DateTime.Parse(Console.ReadLine());
+
+                        bool idadeValida = pf.ValidarDataNascimento(pf.dataNascimento);
+
+                        if (idadeValida == true)
+                        {
+                            Console.WriteLine("Cadastro aprovado");
+                            listaPf.Add(pf);
+                            Console.WriteLine(pf.PagarImposto(pf.salario));
+                        }
+                        else
+                        {
+                            Console.WriteLine("Cadastro não aprovado");
+                        }
+
                         break;
                     case "2":
-                        Endereco endPj = new Endereco();
+                        foreach (var cadaItem in listaPf) {
+                            Console.WriteLine($"{cadaItem.nome}, {cadaItem.cpf}");
+                        }
 
-                        endPj.logradouro = "Rua Niteroi";
-                        endPj.numero = 180;
-                        endPj.complemento = "Escola SENAI Paulo Skaf";
-                        endPj.enderecoComercial = true;
+                        break;
+                    case "3":
+                        Console.WriteLine("Digite o CPF para remover (somente números)");
+                        string cpfProcurado = Console.ReadLine();
 
-                        PessoaJuridica pj = new PessoaJuridica();
-                        pj.cnpj = "48.729.118/0001-81";
-                        pj.endereco = endPj;
-                        pj.razaoSocial = "Pessoa Jurídica";
-                        pj.nome = "Jequiti";
+                        PessoaFisica pessoaEncontrada = listaPf.Find(cadaItem => cadaItem.cpf == cpfProcurado);
 
-                        Console.WriteLine(pj.cnpj);
+                        if (pessoaEncontrada != null) {
+                            listaPf.Remove(pessoaEncontrada);
+                            Console.WriteLine("A pessoa ligada ao CPF foi removida");
+                        } else {
+                            Console.WriteLine("CPF não encontrado");
+                        }
+
+                        break;
+                    case "4":
+
+                        break;
+                    case "5":
+
+                        break;
+                    case "6":
+
                         break;
                     case "0":
-                        Console.WriteLine("Obrigado por utilizar o nosso sistema");
+                        Console.WriteLine("Obrigado por utilizar o nosso sistema.");
+
                         break;
                     default:
                         Console.WriteLine("Opcão inválida, por favor digite uma das opções apresentadas.");
+
                         break;
                 }
             } while (opcao != "0");
