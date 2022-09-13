@@ -260,7 +260,7 @@ namespace Sistema
                             Console.Clear();
                             Console.WriteLine($@"
                             Nome: {cadaItem.nome}
-                            Razão Social: {cadaItem.nome}
+                            Razão Social: {cadaItem.razaoSocial}
                             CNPJ: {cadaItem.cnpj}
                             ");
                         }
