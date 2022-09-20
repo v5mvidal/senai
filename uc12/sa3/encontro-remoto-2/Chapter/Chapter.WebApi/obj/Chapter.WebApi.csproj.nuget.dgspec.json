@@ -1,32 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Administrador\\Desktop\\seguranca\\Chapter\\Chapter.WebApi\\Chapter.WebApi.csproj": {}
+    "C:\\dev\\arquivos\\SENAI\\Programador Full Stack\\Atividades\\senai\\uc12\\sa3\\encontro-remoto-2\\Chapter\\Chapter.WebApi\\Chapter.WebApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Administrador\\Desktop\\seguranca\\Chapter\\Chapter.WebApi\\Chapter.WebApi.csproj": {
+    "C:\\dev\\arquivos\\SENAI\\Programador Full Stack\\Atividades\\senai\\uc12\\sa3\\encontro-remoto-2\\Chapter\\Chapter.WebApi\\Chapter.WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Administrador\\Desktop\\seguranca\\Chapter\\Chapter.WebApi\\Chapter.WebApi.csproj",
+        "projectUniqueName": "C:\\dev\\arquivos\\SENAI\\Programador Full Stack\\Atividades\\senai\\uc12\\sa3\\encontro-remoto-2\\Chapter\\Chapter.WebApi\\Chapter.WebApi.csproj",
         "projectName": "Chapter.WebApi",
-        "projectPath": "C:\\Users\\Administrador\\Desktop\\seguranca\\Chapter\\Chapter.WebApi\\Chapter.WebApi.csproj",
-        "packagesPath": "C:\\Users\\Administrador\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Administrador\\Desktop\\seguranca\\Chapter\\Chapter.WebApi\\obj\\",
+        "projectPath": "C:\\dev\\arquivos\\SENAI\\Programador Full Stack\\Atividades\\senai\\uc12\\sa3\\encontro-remoto-2\\Chapter\\Chapter.WebApi\\Chapter.WebApi.csproj",
+        "packagesPath": "C:\\Users\\manoe\\.nuget\\packages\\",
+        "outputPath": "C:\\dev\\arquivos\\SENAI\\Programador Full Stack\\Atividades\\senai\\uc12\\sa3\\encontro-remoto-2\\Chapter\\Chapter.WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Administrador\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\manoe\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0"
+          "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {}
           }
         },
@@ -37,8 +37,8 @@
         }
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
             "Swashbuckle.AspNetCore.Swagger": {
               "target": "Package",
@@ -59,7 +59,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -71,7 +72,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

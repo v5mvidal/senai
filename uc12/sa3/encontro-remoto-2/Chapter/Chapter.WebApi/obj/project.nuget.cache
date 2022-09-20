@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "IaAbJioZyE9Q/5ER4LuqLRoqlBqwXDxji9fFlj6Iy0N9erlySui0QN+bEncpTYWxzCznyEsk6W5ii+sdsi95TQ==",
+  "dgSpecHash": "ejpySXdm9W9NYRRsiOl04WZm062zlGaObXyQcx0w8ChwoTgTJF+AQIOiM3odkMKecghwR5q8CPSTvKogrlUMNw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Administrador\\Desktop\\seguranca\\Chapter\\Chapter.WebApi\\Chapter.WebApi.csproj",
+  "projectFilePath": "C:\\dev\\arquivos\\SENAI\\Programador Full Stack\\Atividades\\senai\\uc12\\sa3\\encontro-remoto-2\\Chapter\\Chapter.WebApi\\Chapter.WebApi.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Administrador\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
-    "C:\\Users\\Administrador\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.1.4\\swashbuckle.aspnetcore.swagger.6.1.4.nupkg.sha512",
-    "C:\\Users\\Administrador\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.1.4\\swashbuckle.aspnetcore.swaggergen.6.1.4.nupkg.sha512",
-    "C:\\Users\\Administrador\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.1.4\\swashbuckle.aspnetcore.swaggerui.6.1.4.nupkg.sha512"
+    "C:\\Users\\manoe\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\manoe\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.1.4\\swashbuckle.aspnetcore.swagger.6.1.4.nupkg.sha512",
+    "C:\\Users\\manoe\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.1.4\\swashbuckle.aspnetcore.swaggergen.6.1.4.nupkg.sha512",
+    "C:\\Users\\manoe\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.1.4\\swashbuckle.aspnetcore.swaggerui.6.1.4.nupkg.sha512"
   ],
   "logs": []
 }
