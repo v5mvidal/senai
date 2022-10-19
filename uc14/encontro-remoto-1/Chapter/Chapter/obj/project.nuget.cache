@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0dMEz6ars//ykfKCFXByT/YS+BDLyh1+Wuk1LTSfOanU0ZYCN4dewIBMipObRBItVZoHLTA9f7MGAbYdEolClA==",
+  "dgSpecHash": "3AxCFoYTDkoDEBiYFNPoaFEhSYfpUCwN/xB+Guv3BWJTpZ307ECujScqiQ16KXiMy2CePaMFuHHbdijl3XqU0g==",
   "success": true,
-  "projectFilePath": "C:\\dev\\arquivos\\SENAI\\Programador Full Stack\\Atividades\\UC14\\Chapter\\Chapter\\Chapter\\Chapter.csproj",
+  "projectFilePath": "C:\\dev\\arquivos\\SENAI\\Programador Full Stack\\Atividades\\senai\\uc14\\encontro-remoto-1\\Chapter\\Chapter\\Chapter.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\manoe\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\manoe\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",

@@ -2128,11 +2128,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\dev\\arquivos\\SENAI\\Programador Full Stack\\Atividades\\UC14\\Chapter\\Chapter\\Chapter\\Chapter.csproj",
+      "projectUniqueName": "C:\\dev\\arquivos\\SENAI\\Programador Full Stack\\Atividades\\senai\\uc14\\encontro-remoto-1\\Chapter\\Chapter\\Chapter.csproj",
       "projectName": "Chapter",
-      "projectPath": "C:\\dev\\arquivos\\SENAI\\Programador Full Stack\\Atividades\\UC14\\Chapter\\Chapter\\Chapter\\Chapter.csproj",
+      "projectPath": "C:\\dev\\arquivos\\SENAI\\Programador Full Stack\\Atividades\\senai\\uc14\\encontro-remoto-1\\Chapter\\Chapter\\Chapter.csproj",
       "packagesPath": "C:\\Users\\manoe\\.nuget\\packages\\",
-      "outputPath": "C:\\dev\\arquivos\\SENAI\\Programador Full Stack\\Atividades\\UC14\\Chapter\\Chapter\\Chapter\\obj\\",
+      "outputPath": "C:\\dev\\arquivos\\SENAI\\Programador Full Stack\\Atividades\\senai\\uc14\\encontro-remoto-1\\Chapter\\Chapter\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\manoe\\AppData\\Roaming\\NuGet\\NuGet.Config",

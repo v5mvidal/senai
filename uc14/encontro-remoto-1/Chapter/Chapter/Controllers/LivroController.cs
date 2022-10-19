@@ -1,4 +1,5 @@
-﻿using Chapter.Repositories;
+﻿using Chapter.Models;
+using Chapter.Repositories;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -24,6 +25,85 @@ namespace Chapter.Controllers
                 return Ok(_livroRepository.Listar());
             }
             catch(Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+
+        [HttpGet("{id}")]
+        public IActionResult BuscarPorId(int id)
+        {
+            try
+            {
+                Livro livrobuscado = _livroRepository.BuscarPorId(id);
+
+                if (livrobuscado == null)
+                {
+                    return NotFound();
+                }
+
+                return Ok(livrobuscado);
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+
+        [HttpPost]
+        public IActionResult Cadastrar(Livro livro)
+        {
+            try
+            {
+                _livroRepository.Cadastrar(livro);
+
+                return StatusCode(201);
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult DeletarPorId(int id)
+        {
+            try
+            {
+                Livro livrobuscado = _livroRepository.BuscarPorId(id);
+
+                if (livrobuscado == null)
+                {
+                    return NotFound();
+                }
+
+                _livroRepository.Deletar(id);
+
+                return Ok("Livro removido com sucesso");
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+
+        [HttpPut("{id}")]
+        public IActionResult Atualizar(int id, Livro livro)
+        {
+            try
+            {
+                Livro livrobuscado = _livroRepository.BuscarPorId(id);
+
+                if (livrobuscado == null)
+                {
+                    return NotFound();
+                }
+
+                _livroRepository.Atualizar(id, livro);
+
+                return StatusCode(204);
+            }
+            catch (Exception e)
             {
                 throw new Exception(e.Message);
             }
