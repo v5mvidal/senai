@@ -118,3 +118,5 @@ C:\dev\arquivos\SENAI\Programador Full Stack\Atividades\senai\uc14\encontro-remo
 C:\dev\arquivos\SENAI\Programador Full Stack\Atividades\senai\uc14\encontro-remoto-1\Chapter\Chapter\obj\Debug\net6.0\Chapter.pdb
 C:\dev\arquivos\SENAI\Programador Full Stack\Atividades\senai\uc14\encontro-remoto-1\Chapter\Chapter\obj\Debug\net6.0\Chapter.genruntimeconfig.cache
 C:\dev\arquivos\SENAI\Programador Full Stack\Atividades\senai\uc14\encontro-remoto-1\Chapter\Chapter\obj\Debug\net6.0\ref\Chapter.dll
+C:\dev\arquivos\SENAI\Programador Full Stack\Atividades\senai\uc14\encontro-remoto-1\Chapter\Chapter\bin\Debug\net6.0\Chapter.xml
+C:\dev\arquivos\SENAI\Programador Full Stack\Atividades\senai\uc14\encontro-remoto-1\Chapter\Chapter\obj\Debug\net6.0\Chapter.xml

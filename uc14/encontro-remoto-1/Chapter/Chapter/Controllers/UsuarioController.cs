@@ -1,4 +1,5 @@
-﻿using Chapter.Models;
+﻿using Chapter.Interfaces;
+using Chapter.Models;
 using Chapter.Repositories;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -8,54 +9,61 @@ namespace Chapter.Controllers
     [Produces("application/json")]
     [Route("api/[controller]")]
     [ApiController]
-    public class LivroController : ControllerBase
+    public class UsuarioController : ControllerBase
     {
-        private readonly LivroRepository _livroRepository;
-
-        public LivroController(LivroRepository livroRepository)
+        private readonly IUsuarioRepository _usuarioRepository;
+        public UsuarioController(IUsuarioRepository usuarioRepository)
         {
-            _livroRepository = livroRepository;
+            _usuarioRepository = usuarioRepository;
         }
-
+        /// <summary>
+        /// Listar usuários
+        /// </summary>
+        /// <returns></returns>
+        /// <exception cref="Exception"></exception>
         [HttpGet]
         public IActionResult Listar()
         {
             try
             {
-                return Ok(_livroRepository.Listar());
-            }
-            catch(Exception e)
-            {
-                throw new Exception(e.Message);
-            }
-        }
-
-        [HttpGet("{id}")]
-        public IActionResult BuscarPorId(int id)
-        {
-            try
-            {
-                Livro livroBuscado = _livroRepository.BuscarPorId(id);
-
-                if (livroBuscado == null)
-                {
-                    return NotFound();
-                }
-
-                return Ok(livroBuscado);
+                return Ok(_usuarioRepository.Listar());
             }
             catch (Exception e)
             {
                 throw new Exception(e.Message);
             }
         }
-
-        [HttpPost]
-        public IActionResult Cadastrar(Livro livro)
+        /// <summary>
+        /// Buscar usuário por ID
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        /// <exception cref="Exception"></exception>
+        [HttpGet("{id}")]
+        public IActionResult BuscarPorId(int id)
         {
             try
             {
-                _livroRepository.Cadastrar(livro);
+                Usuario usuarioBuscado = _usuarioRepository.BuscarPorId(id);
+
+                if (usuarioBuscado == null)
+                {
+                    return NotFound();
+                }
+
+                return Ok(usuarioBuscado);
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+        [HttpPost]
+        public IActionResult Cadastrar(Usuario usuario)
+        {
+            try
+            {
+                _usuarioRepository.Cadastrar(usuario);
 
                 return StatusCode(201);
             }
@@ -64,42 +72,40 @@ namespace Chapter.Controllers
                 throw new Exception(e.Message);
             }
         }
-
         [HttpDelete("{id}")]
         public IActionResult DeletarPorId(int id)
         {
             try
             {
-                Livro livroBuscado = _livroRepository.BuscarPorId(id);
+                Usuario usuarioBuscado = _usuarioRepository.BuscarPorId(id);
 
-                if (livroBuscado == null)
+                if (usuarioBuscado == null)
                 {
                     return NotFound();
                 }
 
-                _livroRepository.Deletar(id);
+                _usuarioRepository.Deletar(id);
 
-                return Ok("Livro removido com sucesso");
+                return Ok("Usuário removido com sucesso");
             }
             catch (Exception e)
             {
                 throw new Exception(e.Message);
             }
         }
-
         [HttpPut("{id}")]
-        public IActionResult Atualizar(int id, Livro livro)
+        public IActionResult Atualizar(int id, Usuario usuario)
         {
             try
             {
-                Livro livroBuscado = _livroRepository.BuscarPorId(id);
+                Usuario usuarioBuscado = _usuarioRepository.BuscarPorId(id);
 
-                if (livroBuscado == null)
+                if (usuarioBuscado == null)
                 {
                     return NotFound();
                 }
 
-                _livroRepository.Atualizar(id, livro);
+                _usuarioRepository.Atualizar(id, usuario);
 
                 return StatusCode(204);
             }
