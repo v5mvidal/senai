@@ -1,0 +1,12 @@
+C:\dev\arquivos\SENAI\Programador Full Stack\Atividades\senai\uc15\Projeto Teste\Projeto Teste\bin\Debug\net6.0\Projeto_Teste.deps.json
+C:\dev\arquivos\SENAI\Programador Full Stack\Atividades\senai\uc15\Projeto Teste\Projeto Teste\bin\Debug\net6.0\Projeto_Teste.dll
+C:\dev\arquivos\SENAI\Programador Full Stack\Atividades\senai\uc15\Projeto Teste\Projeto Teste\bin\Debug\net6.0\Projeto_Teste.pdb
+C:\dev\arquivos\SENAI\Programador Full Stack\Atividades\senai\uc15\Projeto Teste\Projeto Teste\obj\Debug\net6.0\Projeto_Teste.csproj.AssemblyReference.cache
+C:\dev\arquivos\SENAI\Programador Full Stack\Atividades\senai\uc15\Projeto Teste\Projeto Teste\obj\Debug\net6.0\Projeto_Teste.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev\arquivos\SENAI\Programador Full Stack\Atividades\senai\uc15\Projeto Teste\Projeto Teste\obj\Debug\net6.0\Projeto_Teste.AssemblyInfoInputs.cache
+C:\dev\arquivos\SENAI\Programador Full Stack\Atividades\senai\uc15\Projeto Teste\Projeto Teste\obj\Debug\net6.0\Projeto_Teste.AssemblyInfo.cs
+C:\dev\arquivos\SENAI\Programador Full Stack\Atividades\senai\uc15\Projeto Teste\Projeto Teste\obj\Debug\net6.0\Projeto_Teste.csproj.CoreCompileInputs.cache
+C:\dev\arquivos\SENAI\Programador Full Stack\Atividades\senai\uc15\Projeto Teste\Projeto Teste\obj\Debug\net6.0\Projeto_Teste.dll
+C:\dev\arquivos\SENAI\Programador Full Stack\Atividades\senai\uc15\Projeto Teste\Projeto Teste\obj\Debug\net6.0\refint\Projeto_Teste.dll
+C:\dev\arquivos\SENAI\Programador Full Stack\Atividades\senai\uc15\Projeto Teste\Projeto Teste\obj\Debug\net6.0\Projeto_Teste.pdb
+C:\dev\arquivos\SENAI\Programador Full Stack\Atividades\senai\uc15\Projeto Teste\Projeto Teste\obj\Debug\net6.0\ref\Projeto_Teste.dll
