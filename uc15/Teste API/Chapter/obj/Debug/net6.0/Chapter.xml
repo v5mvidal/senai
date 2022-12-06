@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Chapter</name>
+    </assembly>
+    <members>
+        <member name="M:Chapter.Controllers.UsuarioController.Listar">
+            <summary>
+            Listar usuários
+            </summary>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:Chapter.Controllers.UsuarioController.BuscarPorId(System.Int32)">
+            <summary>
+            Buscar usuário por ID
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+    </members>
+</doc>
